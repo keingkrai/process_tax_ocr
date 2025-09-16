@@ -36,7 +36,11 @@ class FindInvoiceCompany:
 
         # options = webdriver.ChromeOptions()
         options = Options()
-        options.add_experimental_option("detach", False)  # ให้ปิดอัตโนมัติ
+        options.add_argument("--headless=new")
+        options.add_argument("--no-sandbox")
+        options.add_argument("--disable-dev-shm-usage")
+        options.binary_location = "/nix/store/...-chromium-xxx/bin/chromium"  # Railway path
+
         driver = webdriver.Chrome(options=options)
 
         try:
@@ -111,3 +115,4 @@ class FindInvoiceCompany:
         out_path = f"{self.file_name}_output_page_{self.page}.json"
         # with open(out_path, "w", encoding="utf-8") as f:
         #     json.dump(self.data, f, ensure_ascii=False, indent=2)
+

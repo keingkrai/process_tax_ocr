@@ -35,6 +35,7 @@ class FindInvoiceCompany:
             return self.data
 
         # options = webdriver.ChromeOptions()
+        print(shutil.which("chromium"))
         options = Options()
         options.add_argument("--headless=new")
         options.add_argument("--no-sandbox")
@@ -115,4 +116,5 @@ class FindInvoiceCompany:
         out_path = f"{self.file_name}_output_page_{self.page}.json"
         # with open(out_path, "w", encoding="utf-8") as f:
         #     json.dump(self.data, f, ensure_ascii=False, indent=2)
+
 

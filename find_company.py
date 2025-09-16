@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.options import Options
 from rapidfuzz import fuzz
 import time, re, json
 
@@ -33,7 +34,8 @@ class FindInvoiceCompany:
             })
             return self.data
 
-        options = webdriver.ChromeOptions()
+        # options = webdriver.ChromeOptions()
+        options = Options()
         options.add_experimental_option("detach", False)  # ให้ปิดอัตโนมัติ
         driver = webdriver.Chrome(options=options)
 
@@ -71,6 +73,7 @@ class FindInvoiceCompany:
                 # fallback: ถ้าไม่มี prefix ก็ใช้ข้อความตรง ๆ
                 company_name = company_text or None
 
+            print(company_name)
             seller_name = (self.data.get("seller") or "").strip()
             if company_name:
                 similarity = fuzz.ratio(company_name.strip(), seller_name)
@@ -104,7 +107,7 @@ class FindInvoiceCompany:
 
     def _write_out(self, verified: dict):
         self.data["verified_seller_name"] = verified
-        print(self.page)
+        #print(self.page) # 👈 แสดงผลหน้าจอ (stdout)
         out_path = f"{self.file_name}_output_page_{self.page}.json"
-        with open(out_path, "w", encoding="utf-8") as f:
-            json.dump(self.data, f, ensure_ascii=False, indent=2)
+        # with open(out_path, "w", encoding="utf-8") as f:
+        #     json.dump(self.data, f, ensure_ascii=False, indent=2)

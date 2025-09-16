@@ -1,0 +1,50 @@
+{
+  "title": "ใบกำกับภาษีอย่างย่อ",
+  "invoice_type": "Unknown",
+  "seller": "บริษัท ดีเคทลอน (ประเทศไทย) จำกัด",
+  "seller_address": {
+    "number": "19/501",
+    "street": "ถนนเทพรัตน",
+    "subdistrict": "ตำบลบางแก้ว",
+    "district": "อำเภอบางพลี",
+    "province": "จังหวัดสมุทรปราการ",
+    "postal_code": "10540"
+  },
+  "buyer": null,
+  "buyer_address": null,
+  "tax_id": "0115558007311",
+  "date": {
+    "day": "13",
+    "month": "8",
+    "year": "2023"
+  },
+  "invoice_no": "2300604895",
+  "items": [
+    {
+      "name": "กางเกงขาสั้นผู้ชายสำหรับใส่วิ่งรุ่น RUN DRY (สีดำ)",
+      "quantity": "2.00",
+      "unit_price": "160.00",
+      "total_price": "320.00"
+    },
+    {
+      "name": "กางเกงขาสั้นสำหรับการออกกำลังกายแบบคาร์ดิโอรุ่น FST 100 (สีดำ)",
+      "quantity": "1.00",
+      "unit_price": "160.00",
+      "total_price": "160.00"
+    }
+  ],
+  "subtotal": "480.00",
+  "vat": "31.40",
+  "total": "488.60",
+  "amount_text": "=ห้าร้อยบาทถ้วน=",
+  "warranty_period": null,
+  "category": "การออมการลงทุนและประกัน",
+  "sub_category": "เบี้ยประกันสุขภาพ",
+  "verified_seller_name": {
+    "matched": true,
+    "seller_from_receipt": "บริษัท ดีเคทลอน (ประเทศไทย) จำกัด",
+    "seller_from_tax_id": "บริษัท ดีแคทลอน (ประเทศไทย) จำกัด"
+  },
+  "deduction_status": "ไม่สามารถลดหย่อนได้",
+  "reason": "ไม่สามารถลดหย่อนได้ เพราะ  ปีภาษีไม่ตรง (ต้องเป็น 2568)"
+}

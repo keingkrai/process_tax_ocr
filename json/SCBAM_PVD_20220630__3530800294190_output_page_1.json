@@ -1,0 +1,38 @@
+{
+  "title": "เอกสารสำคัญ / Official Document",
+  "invoice_type": "Unknown",
+  "seller": "ธนาคารไทยพาณิชย์ จำกัด (มหาชน) / Siam Commercial Bank Public Company Limited",
+  "seller_address": {
+    "number": "9",
+    "street": "ถนนพระราม 9",
+    "subdistrict": "ทุ่งขวาง",
+    "district": "ห้วยขวาง",
+    "province": "กรุงเทพฯ",
+    "postal_code": "10310"
+  },
+  "buyer": null,
+  "buyer_address": null,
+  "tax_id": null,
+  "date": {
+    "day": "30",
+    "month": "06",
+    "year": "2565"
+  },
+  "invoice_no": "1202/392",
+  "items": [],
+  "subtotal": null,
+  "vat": null,
+  "total": null,
+  "amount_text": null,
+  "warranty_period": null,
+  "category": "การออมการลงทุนและประกัน",
+  "sub_category": "เบี้ยประกันสุขภาพ",
+  "verified_seller_name": {
+    "matched": null,
+    "seller_from_receipt": "ธนาคารไทยพาณิชย์ จำกัด (มหาชน) / Siam Commercial Bank Public Company Limited",
+    "seller_from_tax_id": null,
+    "reason": "invalid_or_missing_tax_id"
+  },
+  "deduction_status": "ไม่สามารถลดหย่อนได้",
+  "reason": "ไม่สามารถลดหย่อนได้ เพราะ: ชื่อผู้ซื้อไม่ตรงกับชื่อผู้ใช้ระบบ"
+}

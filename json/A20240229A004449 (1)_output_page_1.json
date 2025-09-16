@@ -1,0 +1,57 @@
+{
+  "title": "ใบเสร็จรับเงิน/ใบกำกับภาษีอย่างย่อ/ใบส่งสินค้า",
+  "invoice_type": "Unknown",
+  "seller": "Scommerce (Thailand) Co., Ltd.",
+  "seller_address": {
+    "number": "333/15-19",
+    "street": null,
+    "subdistrict": "Bang Sao Thong",
+    "district": "Bang Sao Thong",
+    "province": "Samut Prakan",
+    "postal_code": "10570"
+  },
+  "buyer": "สุชน สะควกรับช่วง",
+  "buyer_address": {
+    "number": "155",
+    "street": "ถนนอินใจมี",
+    "subdistrict": "ศรีพนมมาศ",
+    "district": "หลับแล",
+    "province": "อุตรดิตถ์",
+    "postal_code": "53130"
+  },
+  "tax_id": "0105560113122",
+  "date": {
+    "day": "29",
+    "month": "02",
+    "year": "2024"
+  },
+  "invoice_no": "A20240229A004449",
+  "items": [
+    {
+      "name": "Head & Shoulders แชมพูขจัดรังแค สูตรแอปเปิ้ล เฟรช 850 มล. Anti Dandruff Shampoo Apple Fresh:แอปเปิ้ล",
+      "quantity": "1",
+      "unit_price": "1,116.00",
+      "total_price": "1,116.00"
+    },
+    {
+      "name": "Shipping Fee",
+      "quantity": "1",
+      "unit_price": "54.00",
+      "total_price": "54.00"
+    }
+  ],
+  "subtotal": "1,170.00",
+  "vat": null,
+  "total": "746.00",
+  "amount_text": "เจ็ดร้อยสี่สิบหกบาทถ้วน",
+  "warranty_period": null,
+  "category": "การออมการลงทุนและประกัน",
+  "sub_category": "เบี้ยประกันสุขภาพ",
+  "verified_seller_name": {
+    "matched": false,
+    "seller_from_receipt": "Scommerce (Thailand) Co., Ltd.",
+    "seller_from_tax_id": "บริษัท เอสคอมเมิร์ซ (ประเทศไทย) จำกัด"
+  },
+  "deduction_status": "ไม่สามารถลดหย่อนได้",
+  "reason": "ไม่สามารถลดหย่อนได้ เพราะ  ไม่สามารถยืนยันชื่อบริษัทกับฐานข้อมูล"
+}

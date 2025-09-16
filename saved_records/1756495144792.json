@@ -1,0 +1,70 @@
+{
+  "id": "1756495144792",
+  "savedAt": "2025-08-29T19:19:04.792025Z",
+  "fileName": "504-3431427-2020.pdf",
+  "memberName": "Keingkrai Buakeaw",
+  "title": "หนังสือรับรองการชำระเบี้ยประกันภัย",
+  "seller": "บริษัท กรุงไทย-แอกซ่า ประกันชีวิต จำกัด (มหาชน)",
+  "dateStr": "2020",
+  "total": "20,560.77",
+  "deduction_status": "ไม่สามารถลดหย่อนได้",
+  "reason": "ไม่สามารถลดหย่อนได้ เพราะ: ชื่อผู้ซื้อไม่ตรงกับชื่อผู้ใช้ระบบ",
+  "raw": {
+    "file": "504-3431427-2020.pdf",
+    "pages": {
+      "9": {
+        "title": "หนังสือรับรองการชำระเบี้ยประกันภัย",
+        "invoice_type": "Unknown",
+        "seller": "บริษัท กรุงไทย-แอกซ่า ประกันชีวิต จำกัด (มหาชน)",
+        "seller_address": {
+          "number": "9",
+          "street": "ถนนพระราม 9",
+          "subdistrict": "ห้วยขวาง",
+          "district": "ห้วยขวาง",
+          "province": "กรุงเทพมหานคร",
+          "postal_code": "10310"
+        },
+        "buyer": "นางวงศ์ปัญญา นวนแก้ว",
+        "buyer_address": {
+          "number": "194/181",
+          "street": null,
+          "subdistrict": "ต.ในเมือง",
+          "district": "อ.เมือง",
+          "province": "จนแก่น",
+          "postal_code": "40000"
+        },
+        "tax_id": "0107555000376",
+        "date": {
+          "day": null,
+          "month": "เมษายน",
+          "year": "2563"
+        },
+        "invoice_no": "0013142411",
+        "items": [
+          {
+            "name": null,
+            "quantity": null,
+            "unit_price": null,
+            "total_price": "20,560.77"
+          }
+        ],
+        "subtotal": null,
+        "vat": null,
+        "total": "20,560.77",
+        "amount_text": null,
+        "warranty_period": "10",
+        "category": "การออมการลงทุนและประกัน",
+        "sub_category": "เบี้ยประกันสุขภาพ",
+        "verified_seller_name": {
+          "matched": null,
+          "seller_from_receipt": "บริษัท กรุงไทย-แอกซ่า ประกันชีวิต จำกัด (มหาชน)",
+          "seller_from_tax_id": null,
+          "error": "Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception\nStacktrace:\n\tGetHandleVerifier [0x0x7ff6cd603d85+79397]\n\tGetHandleVerifier [0x0x7ff6cd603de0+79488]\n\t(No symbol) [0x0x7ff6cd3abf2c]\n\t(No symbol) [0x0x7ff6cd3f32df]\n\t(No symbol) [0x0x7ff6cd42b062]\n\t(No symbol) [0x0x7ff6cd425b93]\n\t(No symbol) [0x0x7ff6cd424c59]\n\t(No symbol) [0x0x7ff6cd376fd5]\n\tGetHandleVerifier [0x0x7ff6cd8ce1ed+3005069]\n\tGetHandleVerifier [0x0x7ff6cd8c831d+2980797]\n\tGetHandleVerifier [0x0x7ff6cd8e7e0d+3110573]\n\tGetHandleVerifier [0x0x7ff6cd61d6de+184190]\n\tGetHandleVerifier [0x0x7ff6cd62516f+215567]\n\t(No symbol) [0x0x7ff6cd375fd1]\n\tGetHandleVerifier [0x0x7ff6cd9f1d48+4199912]\n\tBaseThreadInitThunk [0x0x7ffc0b84e8d7+23]\n\tRtlUserThreadStart [0x0x7ffc0d15c34c+44]\n"
+        },
+        "deduction_status": "ไม่สามารถลดหย่อนได้",
+        "reason": "ไม่สามารถลดหย่อนได้ เพราะ: ชื่อผู้ซื้อไม่ตรงกับชื่อผู้ใช้ระบบ"
+      }
+    },
+    "download_path": "/download/504-3431427-2020.pdf"
+  }
+}

@@ -2,11 +2,10 @@ from datetime import datetime
 import json
 
 class check_condition:
-    def __init__(self, input_json: dict, file_name: str, num: int, user_name: str):
+    def __init__(self, input_json: dict, file_name: str, num: int):
         self.input_json_raw = input_json or {}
         self.file_name = file_name
         self.page = num
-        self.user_name = user_name
 
     @staticmethod
     def _safe_int(x, default=None):
@@ -16,14 +15,13 @@ class check_condition:
             return default
 
     def _write_out(self):
-        with open(f"{self.file_name}_output_page_{self.page}.json", "w", encoding="utf-8") as f:
+        with open(f"./json/{self.file_name}_output_page_{self.page}.json", "w", encoding="utf-8") as f:
             json.dump(self.input_json_raw, f, ensure_ascii=False, indent=2)
 
     def check(self) -> dict:
         now = datetime.now()
         data = self.input_json_raw
 
-        buyer = (data.get("buyer") or "").strip()
         verified = data.get("verified_seller_name") or {}
         comfirm_company = verified.get("matched")
 
@@ -32,22 +30,19 @@ class check_condition:
         m = self._safe_int(date_obj.get("month"))
         y = self._safe_int(date_obj.get("year"))
 
-        print("ชื่อผู้ใช้:", buyer,
-              "ปีที่ลดหย่อน:", y,
+        print("ปีที่ลดหย่อน:", y,
               "ชื่อบริษัท:", comfirm_company,
               "วันที่รับเอกสาร:", date_obj,
-              now.year + 542)
+              "ปีที่เป็นพ.ศ ", now.year + 543)
 
         reason = ""
-        # เทียบชื่อ
-        if buyer != self.user_name:
-            reason = "ชื่อผู้ซื้อไม่ตรงกับชื่อผู้ใช้"
+
         # เทียบการยืนยันบริษัท
-        elif not comfirm_company:
+        if not comfirm_company:
             reason = "ไม่สามารถยืนยันชื่อบริษัทกับฐานข้อมูล"
         # เทียบปี (ระวังชนิดข้อมูลให้เป็น int ทั้งคู่)
-        elif y != (now.year + 542):
-            reason = f"ปีภาษีไม่ตรง (ต้องเป็น {now.year + 542})"
+        elif y != (now.year + 543):
+            reason = f"ปีภาษีไม่ตรง (ต้องเป็น {now.year + 543})"
 
         # กรณีผ่านเงื่อนไขพื้นฐาน
         if not reason:
@@ -105,7 +100,7 @@ class check_condition:
                     break
                 elif cat == "Easy E-Receipt" and (
                     (not (d is not None and m is not None and y is not None and d >= 1 and m >= 1 and y == (now.year + 542)))
-                    and (d is not None and m is not None and y is not None and d <= 15 and m <= 2 and y == (now.year + 542))
+                    and (d is not None and m is not None and y is not None and d <= 15 and m <= 2 and y == (now.year + 542) and data["invoice_type"] != "Full Invoice")
                 ):
                     it["deduction_status"] = "ไม่สามารถลดหย่อนได้"
                     break
@@ -120,7 +115,7 @@ class check_condition:
 
         else:
             data["deduction_status"] = "ไม่สามารถลดหย่อนได้"
-            data["reason"] = f"ไม่สามารถลดหย่อนได้ เพราะ: {reason}"
+            data["reason"] = f"ไม่สามารถลดหย่อนได้ เพราะ  {reason}"
             self._write_out()
             print(f"❌ ไม่สามารถลดหย่อนได้ เพราะ: {reason}")
             print("="*20)

@@ -1,0 +1,50 @@
+{
+  "title": "BBL Asset Management Co., Ltd.",
+  "invoice_type": "Unknown",
+  "seller": "BBL Asset Management Co., Ltd.",
+  "seller_address": {
+    "number": "175",
+    "street": "SATHORN CITY TOWER",
+    "subdistrict": null,
+    "district": "South Sathorn",
+    "province": "Bangkok",
+    "postal_code": "10120"
+  },
+  "buyer": null,
+  "buyer_address": null,
+  "tax_id": "0105535049700",
+  "date": {
+    "day": "02",
+    "month": "01",
+    "year": "2567"
+  },
+  "invoice_no": null,
+  "items": [
+    {
+      "name": "SSFBFUTURE",
+      "quantity": "18,701.27",
+      "unit_price": "8.2922",
+      "total_price": null
+    },
+    {
+      "name": "SSFBM70",
+      "quantity": "20,280.20",
+      "unit_price": "8.9923",
+      "total_price": null
+    }
+  ],
+  "subtotal": null,
+  "vat": null,
+  "total": "35,218.53",
+  "amount_text": null,
+  "warranty_period": null,
+  "category": "สินทรัพย์และมาตรการนโยบายภาครัฐ",
+  "sub_category": "ดอกเบี้ยเงินกู้ยืมเพื่อซื้อ เช่าซื้อ หรือสร้างอาคารที่อยู่อาศัย",
+  "verified_seller_name": {
+    "matched": false,
+    "seller_from_receipt": "BBL Asset Management Co., Ltd.",
+    "seller_from_tax_id": "บริษัท หลักทรัพย์จัดการกองทุนรวมบัวหลวง จำกัด"
+  },
+  "deduction_status": "ไม่สามารถลดหย่อนได้",
+  "reason": "ไม่สามารถลดหย่อนได้ เพราะ: ไม่สามารถยืนยันชื่อบริษัทกับฐานข้อมูล"
+}

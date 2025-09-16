@@ -71,7 +71,7 @@ class InvoiceExtractor:
     def typhoon_extract(self) -> dict:
         prompt = self.bulid_prompt()
         resp = self.client.chat.completions.create(
-            model="typhoon-v2-70b-instruct",
+            model="typhoon-v2.1-12b-instruct",
             messages=[{"role": "user", "content": prompt}],
             temperature=0.5,
             max_tokens=1024,

@@ -1,0 +1,87 @@
+{
+  "title": "เงินลงทุนในกองทุนรวมเพื่อการออมตามกฎหมายว่าด้วยหลักทรัพย์และตลาดหลักทรัพย์",
+  "invoice_type": "Unknown",
+  "seller": "KASIKORN ASSET MANAGEMENT",
+  "seller_address": {
+    "number": null,
+    "street": null,
+    "subdistrict": null,
+    "district": null,
+    "province": null,
+    "postal_code": null
+  },
+  "buyer": "นายปริญญาณวนแก้ว",
+  "buyer_address": {
+    "number": "19",
+    "street": "ซ. - ถ. พหลโยธิน",
+    "subdistrict": "แม่กา",
+    "district": "เมืองพะเยา",
+    "province": "พะเยา",
+    "postal_code": "56000"
+  },
+  "tax_id": "0994001026297",
+  "date": {
+    "day": null,
+    "month": null,
+    "year": "2566"
+  },
+  "invoice_no": null,
+  "items": [
+    {
+      "name": "คงเหลือยกมา",
+      "quantity": null,
+      "unit_price": null,
+      "total_price": "0.00"
+    },
+    {
+      "name": "รับโอนระหว่างปี",
+      "quantity": null,
+      "unit_price": null,
+      "total_price": "0.00"
+    },
+    {
+      "name": "ซื้อระหว่างปี",
+      "quantity": null,
+      "unit_price": null,
+      "total_price": "1,000.00"
+    },
+    {
+      "name": "โอนออกระหว่างปี",
+      "quantity": null,
+      "unit_price": null,
+      "total_price": "0.00"
+    },
+    {
+      "name": "ขายคืนระหว่างปี",
+      "quantity": null,
+      "unit_price": null,
+      "total_price": "0.00"
+    },
+    {
+      "name": "ผลประโยชน์ระหว่างปี",
+      "quantity": null,
+      "unit_price": null,
+      "total_price": "22.10"
+    },
+    {
+      "name": "คงเหลือยกไป",
+      "quantity": null,
+      "unit_price": null,
+      "total_price": "1,022.10"
+    }
+  ],
+  "subtotal": null,
+  "vat": null,
+  "total": "1,022.10",
+  "amount_text": null,
+  "warranty_period": null,
+  "category": "การออมการลงทุนและประกัน",
+  "sub_category": "เงินสะสมกองทุนการออมแห่งชาติ (กอช.)",
+  "verified_seller_name": {
+    "matched": null,
+    "seller_from_receipt": "KASIKORN ASSET MANAGEMENT",
+    "seller_from_tax_id": null
+  },
+  "deduction_status": "ไม่สามารถลดหย่อนได้",
+  "reason": "ไม่สามารถลดหย่อนได้ เพราะ  ไม่สามารถยืนยันชื่อบริษัทกับฐานข้อมูล"
+}

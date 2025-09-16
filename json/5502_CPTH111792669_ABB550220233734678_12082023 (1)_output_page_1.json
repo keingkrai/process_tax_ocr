@@ -1,0 +1,57 @@
+{
+  "title": "ใบกำกับภาษีอย่างย่อ/Tax invoice (ABB)",
+  "invoice_type": "Unknown",
+  "seller": "บริษัท เอก-ชัย ดีสทริบิวชั่น ซิสเตม์ จำกัด",
+  "seller_address": {
+    "number": "2",
+    "street": "ถ.ศรีชาวงวัง",
+    "subdistrict": "ตำบลท่าอิฐ",
+    "district": "อำเภอเมือง",
+    "province": "อุตรดิตถ์",
+    "postal_code": "53000"
+  },
+  "buyer": null,
+  "buyer_address": null,
+  "tax_id": "0105536092641",
+  "date": {
+    "day": "12",
+    "month": "08",
+    "year": "2023"
+  },
+  "invoice_no": "0104",
+  "items": [
+    {
+      "name": "51472175 ซีพี เนื้อออกล้วน BB กก.ละ (I)",
+      "quantity": "1.150",
+      "unit_price": "0.070",
+      "total_price": "78.25"
+    },
+    {
+      "name": "732044 เนสท์เล่ โมโลซีเรียล 150g.",
+      "quantity": "1.000",
+      "unit_price": null,
+      "total_price": "69.00"
+    },
+    {
+      "name": "51658797 ค่าน้ำส่ง",
+      "quantity": "1.000",
+      "unit_price": null,
+      "total_price": null
+    }
+  ],
+  "subtotal": "147.25",
+  "vat": "4.51",
+  "total": "147.25",
+  "amount_text": null,
+  "warranty_period": null,
+  "category": "การออมการลงทุนและประกัน",
+  "sub_category": "เบี้ยประกันสุขภาพ",
+  "verified_seller_name": {
+    "matched": null,
+    "seller_from_receipt": "บริษัท เอก-ชัย ดีสทริบิวชั่น ซิสเตม์ จำกัด",
+    "seller_from_tax_id": null,
+    "error": "Message: \nStacktrace:\n\tGetHandleVerifier [0x0x7ff65bfb3d85+79397]\n\tGetHandleVerifier [0x0x7ff65bfb3de0+79488]\n\t(No symbol) [0x0x7ff65bd5c0fa]\n\t(No symbol) [0x0x7ff65bdb2fd6]\n\t(No symbol) [0x0x7ff65bdb328c]\n\t(No symbol) [0x0x7ff65be06537]\n\t(No symbol) [0x0x7ff65bddb1df]\n\t(No symbol) [0x0x7ff65be03344]\n\t(No symbol) [0x0x7ff65bddaf73]\n\t(No symbol) [0x0x7ff65bda41b1]\n\t(No symbol) [0x0x7ff65bda4f43]\n\tGetHandleVerifier [0x0x7ff65c27e1ed+3005069]\n\tGetHandleVerifier [0x0x7ff65c27831d+2980797]\n\tGetHandleVerifier [0x0x7ff65c297e0d+3110573]\n\tGetHandleVerifier [0x0x7ff65bfcd6de+184190]\n\tGetHandleVerifier [0x0x7ff65bfd516f+215567]\n\tGetHandleVerifier [0x0x7ff65bfbc974+115220]\n\tGetHandleVerifier [0x0x7ff65bfbcb29+115657]\n\tGetHandleVerifier [0x0x7ff65bfa3268+11016]\n\tBaseThreadInitThunk [0x0x7ffaa295e8d7+23]\n\tRtlUserThreadStart [0x0x7ffaa417c34c+44]\n"
+  },
+  "deduction_status": "ไม่สามารถลดหย่อนได้",
+  "reason": "ไม่สามารถลดหย่อนได้ เพราะ  ไม่สามารถยืนยันชื่อบริษัทกับฐานข้อมูล"
+}

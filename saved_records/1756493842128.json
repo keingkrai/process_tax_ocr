@@ -1,0 +1,102 @@
+{
+  "id": "1756493842128",
+  "savedAt": "2025-08-29T18:57:22.128153Z",
+  "fileName": "13970213_SCBSSF_2565.pdf",
+  "memberName": "Keingkrai Buakeaw",
+  "title": "หนังสือรับรองการซื้อหน่วยลงทุนรวมเพื่อการออมตามกฎหมายว่าด้วยหลักทรัพย์และตลาดหลักทรัพย์ (แบบ SSF 1/2563)",
+  "seller": "SCB บลจ.ไทยพาณิชย์",
+  "dateStr": "-",
+  "total": "20,954.79",
+  "deduction_status": "ไม่สามารถลดหย่อนได้",
+  "reason": "ไม่สามารถลดหย่อนได้ เพราะ: ชื่อผู้ซื้อไม่ตรงกับชื่อผู้ใช้ระบบ",
+  "raw": {
+    "file": "13970213_SCBSSF_2565.pdf",
+    "pages": {
+      "18": {
+        "title": "หนังสือรับรองการซื้อหน่วยลงทุนรวมเพื่อการออมตามกฎหมายว่าด้วยหลักทรัพย์และตลาดหลักทรัพย์ (แบบ SSF 1/2563)",
+        "invoice_type": "Unknown",
+        "seller": "SCB บลจ.ไทยพาณิชย์",
+        "seller_address": {
+          "number": "18",
+          "street": "ถนนราชดาภิเษก",
+          "subdistrict": "จตุจักร",
+          "district": "เขตจตุจักร",
+          "province": "กรุงเทพฯ",
+          "postal_code": "10900"
+        },
+        "buyer": "นาย ปรัชญา นวนแก้ว",
+        "buyer_address": {
+          "number": "346/1",
+          "street": "ถนนศรีประภา",
+          "subdistrict": "ศรีพนมมาศ",
+          "district": "อำเภอสับแล",
+          "province": "อุตรดิตถ์",
+          "postal_code": "53130"
+        },
+        "tax_id": "0994000136153",
+        "date": null,
+        "invoice_no": "220029441",
+        "items": [
+          {
+            "name": "คงเหลือยกมา",
+            "quantity": null,
+            "unit_price": null,
+            "total_price": "8,000.00"
+          },
+          {
+            "name": "รับโอนระหว่างปี",
+            "quantity": null,
+            "unit_price": null,
+            "total_price": "0.00"
+          },
+          {
+            "name": "ซื้อระหว่างปี",
+            "quantity": null,
+            "unit_price": null,
+            "total_price": "12,000.00"
+          },
+          {
+            "name": "โอนออกระหว่างปี",
+            "quantity": null,
+            "unit_price": null,
+            "total_price": "0.00"
+          },
+          {
+            "name": "ขายคืนระหว่างปี",
+            "quantity": null,
+            "unit_price": null,
+            "total_price": "0.00"
+          },
+          {
+            "name": "ผลประโยชน์ระหว่างปี",
+            "quantity": null,
+            "unit_price": null,
+            "total_price": "(59.27)"
+          },
+          {
+            "name": "คงเหลือยกไป",
+            "quantity": null,
+            "unit_price": null,
+            "total_price": "20,000.00"
+          }
+        ],
+        "subtotal": null,
+        "vat": null,
+        "total": "20,954.79",
+        "amount_text": null,
+        "warranty_period": null,
+        "category": "การออมการลงทุนและประกัน",
+        "sub_category": "ค่าซื้อหน่วยลงทุนในกองทุนรวมไทยเพื่อความยั่งยืน (Thai ESG)",
+        "verified_seller_name": {
+          "matched": null,
+          "seller_from_receipt": "SCB บลจ.ไทยพาณิชย์",
+          "seller_from_tax_id": null,
+          "error": "Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception\nStacktrace:\n\tGetHandleVerifier [0x0x7ff7d4b93d85+79397]\n\tGetHandleVerifier [0x0x7ff7d4b93de0+79488]\n\t(No symbol) [0x0x7ff7d493bf2c]\n\t(No symbol) [0x0x7ff7d49832df]\n\t(No symbol) [0x0x7ff7d49bb062]\n\t(No symbol) [0x0x7ff7d49b5b93]\n\t(No symbol) [0x0x7ff7d49b4c59]\n\t(No symbol) [0x0x7ff7d4906fd5]\n\tGetHandleVerifier [0x0x7ff7d4e5e1ed+3005069]\n\tGetHandleVerifier [0x0x7ff7d4e5831d+2980797]\n\tGetHandleVerifier [0x0x7ff7d4e77e0d+3110573]\n\tGetHandleVerifier [0x0x7ff7d4bad6de+184190]\n\tGetHandleVerifier [0x0x7ff7d4bb516f+215567]\n\t(No symbol) [0x0x7ff7d4905fd1]\n\tGetHandleVerifier [0x0x7ff7d4f81d48+4199912]\n\tBaseThreadInitThunk [0x0x7ffc0b84e8d7+23]\n\tRtlUserThreadStart [0x0x7ffc0d15c34c+44]\n"
+        },
+        "deduction_status": "ไม่สามารถลดหย่อนได้",
+        "reason": "ไม่สามารถลดหย่อนได้ เพราะ: ชื่อผู้ซื้อไม่ตรงกับชื่อผู้ใช้ระบบ"
+      }
+    },
+    "download_path": "/download/13970213_SCBSSF_2565.pdf"
+  }
+}

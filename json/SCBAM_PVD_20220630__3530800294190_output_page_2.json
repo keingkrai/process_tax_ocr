@@ -1,0 +1,45 @@
+{
+  "title": "Individual Statement of Provident Fund Account",
+  "invoice_type": "Unknown",
+  "seller": "ไทยพาณิชย์ มาสเตอร์พันด์",
+  "seller_address": {
+    "number": null,
+    "street": null,
+    "subdistrict": null,
+    "district": null,
+    "province": null,
+    "postal_code": null
+  },
+  "buyer": "นาย ปรัชญา นวนแก้ว",
+  "buyer_address": {
+    "number": null,
+    "street": null,
+    "subdistrict": null,
+    "district": null,
+    "province": null,
+    "postal_code": null
+  },
+  "tax_id": "3530800294190",
+  "date": {
+    "day": "30",
+    "month": "06",
+    "year": "2565"
+  },
+  "invoice_no": "1202/392",
+  "items": [],
+  "subtotal": null,
+  "vat": null,
+  "total": "14,017.9772",
+  "amount_text": null,
+  "warranty_period": null,
+  "category": "การออมการลงทุนและประกัน",
+  "sub_category": "เบี้ยประกันสุขภาพ",
+  "verified_seller_name": {
+    "matched": null,
+    "seller_from_receipt": "ไทยพาณิชย์ มาสเตอร์พันด์",
+    "seller_from_tax_id": null,
+    "error": "Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception\nStacktrace:\n\tGetHandleVerifier [0x0x7ff6f7213d85+79397]\n\tGetHandleVerifier [0x0x7ff6f7213de0+79488]\n\t(No symbol) [0x0x7ff6f6fbbf2c]\n\t(No symbol) [0x0x7ff6f70032df]\n\t(No symbol) [0x0x7ff6f703b062]\n\t(No symbol) [0x0x7ff6f7035b93]\n\t(No symbol) [0x0x7ff6f7034c59]\n\t(No symbol) [0x0x7ff6f6f86fd5]\n\tGetHandleVerifier [0x0x7ff6f74de1ed+3005069]\n\tGetHandleVerifier [0x0x7ff6f74d831d+2980797]\n\tGetHandleVerifier [0x0x7ff6f74f7e0d+3110573]\n\tGetHandleVerifier [0x0x7ff6f722d6de+184190]\n\tGetHandleVerifier [0x0x7ff6f723516f+215567]\n\t(No symbol) [0x0x7ff6f6f85fd1]\n\tGetHandleVerifier [0x0x7ff6f7601d48+4199912]\n\tBaseThreadInitThunk [0x0x7ffaa295e8d7+23]\n\tRtlUserThreadStart [0x0x7ffaa417c34c+44]\n"
+  },
+  "deduction_status": "ไม่สามารถลดหย่อนได้",
+  "reason": "ไม่สามารถลดหย่อนได้ เพราะ: ชื่อผู้ซื้อไม่ตรงกับชื่อผู้ใช้ระบบ"
+}

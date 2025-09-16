@@ -1,0 +1,38 @@
+{
+  "title": "SSFBFUTURE",
+  "invoice_type": "Unknown",
+  "seller": "BBL Asset Management Co., Ltd.",
+  "seller_address": {
+    "number": "175",
+    "street": "SATHORN CITY TOWER",
+    "subdistrict": null,
+    "district": "South Sathorn",
+    "province": "Bangkok",
+    "postal_code": "10120"
+  },
+  "buyer": null,
+  "buyer_address": null,
+  "tax_id": null,
+  "date": {
+    "day": "30",
+    "month": "12",
+    "year": "2565"
+  },
+  "invoice_no": null,
+  "items": [],
+  "subtotal": null,
+  "vat": null,
+  "total": null,
+  "amount_text": null,
+  "warranty_period": null,
+  "category": "การออมการลงทุนและประกัน",
+  "sub_category": "เบี้ยประกันสุขภาพ",
+  "verified_seller_name": {
+    "matched": null,
+    "seller_from_receipt": "BBL Asset Management Co., Ltd.",
+    "seller_from_tax_id": null,
+    "reason": "invalid_or_missing_tax_id"
+  },
+  "deduction_status": "ไม่สามารถลดหย่อนได้",
+  "reason": "ไม่สามารถลดหย่อนได้ เพราะ  ไม่สามารถยืนยันชื่อบริษัทกับฐานข้อมูล"
+}

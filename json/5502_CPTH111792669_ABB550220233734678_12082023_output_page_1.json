@@ -1,0 +1,57 @@
+{
+  "title": "ใบกำกับภาษีอย่างย่อ/Tax invoice (ABB)",
+  "invoice_type": "Unknown",
+  "seller": "บริษัท เอก-ชัย ดีสทริบิวชั่น ซิสเตม์ จำกัด",
+  "seller_address": {
+    "number": "2",
+    "street": "ถ.ศรีชาวงวัง",
+    "subdistrict": "ท่าอิฐ",
+    "district": "เมือง",
+    "province": "อุตรดิตถ์",
+    "postal_code": "53000"
+  },
+  "buyer": null,
+  "buyer_address": null,
+  "tax_id": "0105536092641",
+  "date": {
+    "day": "12",
+    "month": "08",
+    "year": "2023"
+  },
+  "invoice_no": "0104",
+  "items": [
+    {
+      "name": "ซีฟู๊ดกลิ่น BB กก.ละ (I)",
+      "quantity": "1.150",
+      "unit_price": "1.150",
+      "total_price": "1.150"
+    },
+    {
+      "name": "เนสท์เล่ไมโลซีเรียล 150g.",
+      "quantity": "1.000",
+      "unit_price": "1.000",
+      "total_price": "1.000"
+    },
+    {
+      "name": "ค่าน้ำส่ง",
+      "quantity": "1.000",
+      "unit_price": "1.000",
+      "total_price": "1.000"
+    }
+  ],
+  "subtotal": "147.25",
+  "vat": "4.51",
+  "total": "147.25",
+  "amount_text": null,
+  "warranty_period": null,
+  "category": "การออมการลงทุนและประกัน",
+  "sub_category": "เบี้ยประกันสุขภาพ",
+  "verified_seller_name": {
+    "matched": null,
+    "seller_from_receipt": "บริษัท เอก-ชัย ดีสทริบิวชั่น ซิสเตม์ จำกัด",
+    "seller_from_tax_id": null,
+    "error": "Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception\nStacktrace:\n\tGetHandleVerifier [0x0x7ff6dd8a3d85+79397]\n\tGetHandleVerifier [0x0x7ff6dd8a3de0+79488]\n\t(No symbol) [0x0x7ff6dd64bf2c]\n\t(No symbol) [0x0x7ff6dd6932df]\n\t(No symbol) [0x0x7ff6dd6cb062]\n\t(No symbol) [0x0x7ff6dd6c5b93]\n\t(No symbol) [0x0x7ff6dd6c4c59]\n\t(No symbol) [0x0x7ff6dd616fd5]\n\tGetHandleVerifier [0x0x7ff6ddb6e1ed+3005069]\n\tGetHandleVerifier [0x0x7ff6ddb6831d+2980797]\n\tGetHandleVerifier [0x0x7ff6ddb87e0d+3110573]\n\tGetHandleVerifier [0x0x7ff6dd8bd6de+184190]\n\tGetHandleVerifier [0x0x7ff6dd8c516f+215567]\n\t(No symbol) [0x0x7ff6dd615fd1]\n\tGetHandleVerifier [0x0x7ff6ddc91d48+4199912]\n\tBaseThreadInitThunk [0x0x7ffaa295e8d7+23]\n\tRtlUserThreadStart [0x0x7ffaa417c34c+44]\n"
+  },
+  "deduction_status": "ไม่สามารถลดหย่อนได้",
+  "reason": "ไม่สามารถลดหย่อนได้ เพราะ: ชื่อผู้ซื้อไม่ตรงกับชื่อผู้ใช้ระบบ"
+}

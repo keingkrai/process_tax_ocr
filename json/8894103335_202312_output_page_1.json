@@ -1,0 +1,51 @@
+{
+  "title": "SSFBFUTURE - Bualuang Future Equity Super Savings Fund & SSFBM70 - Bualuang 70/30 Super Savings Fund",
+  "invoice_type": "Unknown",
+  "seller": "BBL Asset Management Co., Ltd.",
+  "seller_address": {
+    "number": "175",
+    "street": "Sathon City Tower",
+    "subdistrict": null,
+    "district": "Bangrak",
+    "province": "Bangkok",
+    "postal_code": "10120"
+  },
+  "buyer": null,
+  "buyer_address": null,
+  "tax_id": null,
+  "date": {
+    "day": null,
+    "month": null,
+    "year": null
+  },
+  "invoice_no": null,
+  "items": [
+    {
+      "name": "SSFBFUTURE - Bualuang Future Equity Super Savings Fund",
+      "quantity": null,
+      "unit_price": null,
+      "total_price": null
+    },
+    {
+      "name": "SSFBM70 - Bualuang 70/30 Super Savings Fund",
+      "quantity": null,
+      "unit_price": null,
+      "total_price": null
+    }
+  ],
+  "subtotal": null,
+  "vat": null,
+  "total": 35218.53,
+  "amount_text": null,
+  "warranty_period": null,
+  "category": "การออมการลงทุนและประกัน",
+  "sub_category": "เบี้ยประกันสุขภาพ",
+  "verified_seller_name": {
+    "matched": null,
+    "seller_from_receipt": "BBL Asset Management Co., Ltd.",
+    "seller_from_tax_id": null,
+    "reason": "invalid_or_missing_tax_id"
+  },
+  "deduction_status": "ไม่สามารถลดหย่อนได้",
+  "reason": "ไม่สามารถลดหย่อนได้ เพราะ  ไม่สามารถยืนยันชื่อบริษัทกับฐานข้อมูล"
+}

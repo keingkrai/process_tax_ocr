@@ -1,0 +1,17 @@
+[phases.setup]
+nixPkgs = [
+  "python311",        # ใช้ Python 3.11
+  "chromium",         # Chromium browser
+  "chromedriver",     # Driver สำหรับ Selenium
+  "libGL",            # สำหรับ OpenCV
+  "fontconfig",       # สำหรับ pdf2image / PIL
+  "xorg.libXext",     # X11 libs
+  "xorg.libXrender",
+  "xorg.libXtst"
+]
+
+[phases.install]
+cmds = ["pip install -r requirements.txt"]
+
+[start]
+cmd = "uvicorn app:app --host 0.0.0.0 --port $PORT"

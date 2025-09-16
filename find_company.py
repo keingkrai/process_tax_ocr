@@ -40,16 +40,17 @@ class FindInvoiceCompany:
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-dev-shm-usage")
         
-        # หา chromium อัตโนมัติ
+        print("🔍 กำลังหาที่อยู่ chromium...")
         chromium_path = (
             shutil.which("chromium")
             or shutil.which("chromium-browser")
             or shutil.which("google-chrome")
         )
+        print("chromium_path =", chromium_path)
         
         if chromium_path:
             options.binary_location = chromium_path
-            print("Using Chromium at:", chromium_path)
+            print("✅ Using Chromium at:", chromium_path)
         else:
             print("⚠️ Chromium not found, Selenium อาจรันไม่ขึ้น")
 
@@ -131,3 +132,4 @@ class FindInvoiceCompany:
         out_path = f"{self.file_name}_output_page_{self.page}.json"
         # with open(out_path, "w", encoding="utf-8") as f:
         #     json.dump(self.data, f, ensure_ascii=False, indent=2)
+

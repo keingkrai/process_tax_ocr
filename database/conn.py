@@ -3,7 +3,9 @@ import json, os, hashlib, mimetypes, re
 from datetime import date
 from decimal import Decimal
 from psycopg2.extras import RealDictCursor
+from dotenv import load_dotenv
 
+load_dotenv()
 # --------------------------
 # Helpers: TH month / date / money / file meta
 # --------------------------

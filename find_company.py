@@ -5,7 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from rapidfuzz import fuzz
-import time, re, json
+import time, re, json, shutil
 
 class FindInvoiceCompany:
     def __init__(self, input_json: dict, file_name: str, num: int, fuzzy_threshold: int = 95):
@@ -35,14 +35,29 @@ class FindInvoiceCompany:
             return self.data
 
         # options = webdriver.ChromeOptions()
-        print(shutil.which("chromium"))
         options = Options()
         options.add_argument("--headless=new")
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-dev-shm-usage")
-        options.binary_location = "/nix/store/...-chromium-xxx/bin/chromium"  # Railway path
+        
+        # หา chromium อัตโนมัติ
+        chromium_path = (
+            shutil.which("chromium")
+            or shutil.which("chromium-browser")
+            or shutil.which("google-chrome")
+        )
+        
+        if chromium_path:
+            options.binary_location = chromium_path
+            print("Using Chromium at:", chromium_path)
+        else:
+            print("⚠️ Chromium not found, Selenium อาจรันไม่ขึ้น")
 
         driver = webdriver.Chrome(options=options)
+
+
+        # options.add_experimental_option("detach", False)  # ให้ปิดอัตโนมัติ
+        # driver = webdriver.Chrome(options=options)
 
         try:
             wait = WebDriverWait(driver, 15)
@@ -116,5 +131,3 @@ class FindInvoiceCompany:
         out_path = f"{self.file_name}_output_page_{self.page}.json"
         # with open(out_path, "w", encoding="utf-8") as f:
         #     json.dump(self.data, f, ensure_ascii=False, indent=2)
-
-

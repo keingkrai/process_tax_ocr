@@ -129,6 +129,10 @@ class DatabaseConnection:
             user = os.getenv("SUPABASE_DB_USER")
             pwd  = os.getenv("SUPABASE_DB_PASSWORD")
 
+            print("DB HOST:", host)
+            print("DB USER:", user)
+            print("DB NAME:", db)
+
             # --- Establish the connection ---
             self.connection = pg.connect(
                 host=host,

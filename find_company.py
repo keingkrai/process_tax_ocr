@@ -1,122 +1,57 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.chrome.options import Options
 from rapidfuzz import fuzz
-import time, re, json, shutil
-import undetected_chromedriver as uc
+import re, json
 
+# ไม่จำเป็นต้องใช้ Selenium, TimeoutException, หรือ time อีกต่อไป
 
 class FindInvoiceCompany:
     def __init__(self, input_json: dict, file_name: str, num: int, fuzzy_threshold: int = 95):
-        # input_json ควรเป็น dict “ตัวในสุด” แล้ว (ไม่ใช่ wrapper)
-        self.data = input_json.get("json", input_json)  # รองรับทั้งกรณีมี key "json" หรือไม่มี
+        self.data = input_json.get("json", input_json)
         self.file_name = file_name
         self.page = num
         self.fuzzy_threshold = fuzzy_threshold
 
     def _normalize_tax_id(self, tax_id: str) -> str:
-        digits = re.sub(r"\D", "", tax_id or "")
-        return digits
+        return re.sub(r"\D", "", tax_id or "")
 
     def invoice_company(self) -> dict:
         tax_id_raw = self.data.get("tax_id")
         tax_id = self._normalize_tax_id(tax_id_raw)
-
-        # validate 13 หลักก่อน
+        
+        # 1. ตรวจสอบความถูกต้องของ Tax ID ก่อนเป็นอันดับแรก (ยังคงเป็นสิ่งที่ดี)
         if not tax_id or len(tax_id) != 13:
-            # บันทึกสถานะตรวจไม่ได้ แล้วคืน dict กลับไปให้โค้ดส่วนอื่นใช้งานต่อ
             self._write_out(verified={
                 "matched": None,
                 "seller_from_receipt": (self.data.get("seller") or "").strip(),
-                "seller_from_tax_id": None,
+                "seller_from_tax_id": None, # ทำให้สอดคล้องกันว่าไม่มีข้อมูลจาก Tax ID
                 "reason": "invalid_or_missing_tax_id"
             })
             return self.data
+        
+        # 2. ลบ try...except...finally ที่ไม่จำเป็นออกทั้งหมด
+        # เพราะการทำงานส่วนนี้ปลอดภัยและไม่เกิด Error ร้ายแรง
+        
+        print(f"--- [Page {self.page}] Comparing names for Tax ID: {tax_id} ---")
 
-        # options = webdriver.ChromeOptions()
-        options = uc.ChromeOptions()
-        options.add_argument("--headless=new")
-        options.add_argument("--no-sandbox")
-        options.add_argument("--disable-dev-shm-usage")
-
-        driver = uc.Chrome(options=options)  # ✅ ใช้อันนี้อันเดียว
-
-
-        # options.add_experimental_option("detach", False)  # ให้ปิดอัตโนมัติ
-        # driver = webdriver.Chrome(options=options)
-
-        try:
-            wait = WebDriverWait(driver, 15)
-            driver.get("https://datawarehouse.dbd.go.th/index")
-
-            # ปิด popup / ยอมรับ
-            try:
-                wait.until(EC.element_to_be_clickable((By.ID, "btnWarning"))).click()
-            except Exception:
-                pass  # บางครั้งไม่มีปุ่มนี้
-
-            # กล่องค้นหา
-            box = wait.until(EC.presence_of_element_located((By.ID, "key-word")))
-            box.clear()
-            box.send_keys(tax_id + Keys.ENTER)
-
-            # รอผลลัพธ์/โปรไฟล์ขึ้น
-            time.sleep(1)  # กันโหลด dynamic
-            # ตำแหน่ง h3 เดิมที่คุณใช้
-            try:
-                h3 = wait.until(EC.presence_of_element_located(
-                    (By.XPATH, '//*[@id="companyProfileTab1"]/div[1]/div[1]/div/div/h3')
-                ))
-                company_text = h3.text.strip()
-            except Exception:
-                company_text = ""
-
-            # ตัดชื่อบริษัท
-            m = re.search(r"ชื่อนิติบุคคล\s*[:：]\s*(.+)", company_text)
-            if m:
-                company_name = m.group(1).strip()
-            else:
-                # fallback: ถ้าไม่มี prefix ก็ใช้ข้อความตรง ๆ
-                company_name = company_text or None
-
-            print(company_name)
-            seller_name = (self.data.get("seller") or "").strip()
-            if company_name:
-                similarity = fuzz.ratio(company_name.strip(), seller_name)
-                matched = similarity >= self.fuzzy_threshold
-            else:
-                matched = None
-
-            verified = {
-                "matched": matched,
-                "seller_from_receipt": seller_name,
-                "seller_from_tax_id": company_name
-            }
-
-            self._write_out(verified=verified)
-            return self.data
-
-        except Exception as e:
-            # เขียนสถานะผิดพลาดไว้ด้วย จะได้ debug ย้อนหลังได้
-            self._write_out(verified={
-                "matched": None,
-                "seller_from_receipt": (self.data.get("seller") or "").strip(),
-                "seller_from_tax_id": None,
-                "error": str(e)
-            })
-            return self.data
-        finally:
-            try:
-                driver.quit()
-            except Exception:
-                pass
+        # 3. ดึงข้อมูลชื่อจากใบเสร็จ และชื่อที่ได้จาก Tax ID (ที่ส่งมาใน input)
+        seller_name = (self.data.get("seller") or "").strip()
+        company_name_from_tax_id = (self.data.get("name_company") or "").strip()
+        
+        # 4. ทำการเปรียบเทียบชื่อโดยตรง
+        # ถ้าไม่มีชื่อบริษัทที่ส่งมาด้วย ให้ similarity เป็น 0
+        similarity = fuzz.ratio(company_name_from_tax_id, seller_name) if company_name_from_tax_id else 0
+        
+        verified = {
+            "matched": similarity >= self.fuzzy_threshold,
+            "seller_from_receipt": seller_name,
+            "seller_from_tax_id": company_name_from_tax_id # ใช้ชื่อที่ได้รับมาโดยตรง
+        }
+        
+        self._write_out(verified=verified)
+        print(f"--- [Page {self.page}] Comparison finished. ---")
+        return self.data
 
     def _write_out(self, verified: dict):
         self.data["verified_seller_name"] = verified
-        #print(self.page) # 👈 แสดงผลหน้าจอ (stdout)
         out_path = f"{self.file_name}_output_page_{self.page}.json"
         # with open(out_path, "w", encoding="utf-8") as f:
         #     json.dump(self.data, f, ensure_ascii=False, indent=2)

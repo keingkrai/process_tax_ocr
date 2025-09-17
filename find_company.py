@@ -6,6 +6,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from rapidfuzz import fuzz
 import time, re, json, shutil
+import undetected_chromedriver as uc
+
 
 class FindInvoiceCompany:
     def __init__(self, input_json: dict, file_name: str, num: int, fuzzy_threshold: int = 95):
@@ -35,26 +37,12 @@ class FindInvoiceCompany:
             return self.data
 
         # options = webdriver.ChromeOptions()
-        options = Options()
+        options = uc.ChromeOptions()
         options.add_argument("--headless=new")
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-dev-shm-usage")
-        
-        print("🔍 กำลังหาที่อยู่ chromium...")
-        chromium_path = (
-            shutil.which("chromium")
-            or shutil.which("chromium-browser")
-            or shutil.which("google-chrome")
-        )
-        print("chromium_path =", chromium_path)
-        
-        if chromium_path:
-            options.binary_location = chromium_path
-            print("✅ Using Chromium at:", chromium_path)
-        else:
-            print("⚠️ Chromium not found, Selenium อาจรันไม่ขึ้น")
 
-        driver = webdriver.Chrome(options=options)
+        driver = uc.Chrome(options=options)  # ✅ ใช้อันนี้อันเดียว
 
 
         # options.add_experimental_option("detach", False)  # ให้ปิดอัตโนมัติ
@@ -132,4 +120,3 @@ class FindInvoiceCompany:
         out_path = f"{self.file_name}_output_page_{self.page}.json"
         # with open(out_path, "w", encoding="utf-8") as f:
         #     json.dump(self.data, f, ensure_ascii=False, indent=2)
-

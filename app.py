@@ -17,7 +17,7 @@ load_dotenv(dotenv_path=dotenv_path)
 app = FastAPI(title="Nani Tax Service")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000", "https://smart-tax-opal.vercel.app"],  # TODO: restrict in production
+    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000", "https://smart-tax-gules.vercel.app"],  # TODO: restrict in production
     allow_methods=["*"],
     allow_headers=["*"],
     allow_credentials=True,
